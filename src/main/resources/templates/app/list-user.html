@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>gexam Directory</title>
+</head>
+
+<body class="bg-secondary">
+
+
+<!-- <p th:text="'Time on the server is ' + ${theDate}" class="funny"/>  -->
+
+
+<div class="container">
+
+	<h3 class="text-white text-center mt-5" >List of Admins and Users</h3>
+	<hr>
+		
+	
+	<table class="table table-striped table-dark">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>FirstName</th>
+				<th>LastName</th>
+				<th>Email</th>
+				<th>Status</th>
+				
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="temp : ${user}">
+			
+				<td th:text="${temp.id}" />	
+				<td th:text="${temp.firstName}" />
+				<td th:text="${temp.lastName}" />
+				<td th:text="${temp.email}" />
+				
+				<div th:each="t : ${temp.roles}">
+					<td th:text="${t.name}" />
+				</div>				
+				
+				
+				
+				           
+			</tr>
+		</tbody>		
+	</table>
+	
+</div>
+	
+</body>
+</html>
+
+
+	

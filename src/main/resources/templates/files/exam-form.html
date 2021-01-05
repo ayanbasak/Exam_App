@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save User</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>Exam Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Exam</p>
+	
+		<form action="#" th:action="@{/admin/exam/save}"
+						 th:object="${exam}" method="POST">
+		
+			<input type="text" th:field="*{sid}"
+					class="form-control mb-4 col-4" placeholder="sid">
+					
+			<input type="text" th:field="*{ename}"
+					class="form-control mb-4 col-4" placeholder="Ename">
+
+			<input type="text" th:field="*{score}"
+					class="form-control mb-4 col-4" placeholder="score">
+					
+			<input type="text" th:field="*{tmarks}"
+					class="form-control mb-4 col-4" placeholder="total marks">
+					
+			<input type="text" th:field="*{ehr}"
+					class="form-control mb-4 col-4" placeholder="exam hour">
+					
+			<input type="text" th:field="*{qmodel}"
+					class="form-control mb-4 col-4" placeholder="question model">
+					
+			
+				
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/admin/exam/list}">Back to Exam List</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

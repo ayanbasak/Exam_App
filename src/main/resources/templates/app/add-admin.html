@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Admin</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>Add Admin Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Admin</p>
+	
+		<form action="#" th:action="@{/app/admin/savead}"
+						 th:object="${user}" method="POST">
+					
+			<input type="text" th:field="*{firstName}"
+					class="form-control mb-4 col-4" placeholder="firstName">
+
+			<input type="text" th:field="*{lastName}"
+					class="form-control mb-4 col-4" placeholder="lastName">
+					
+			<input type="text" th:field="*{email}"
+					class="form-control mb-4 col-4" placeholder="email">
+					
+			<input type="text" th:field="*{password}"
+					class="form-control mb-4 col-4" placeholder="password">
+					
+			
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

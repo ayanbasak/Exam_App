@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<title>Admin Setup Directory</title>
+</head>
+<style>
+.heading {
+	margin-top: 50px;
+}
+</style>
+
+<body class="bg-secondary">   
+
+
+	<!-- <p th:text="'Time on the server is ' + ${theDate}" class="funny"/>  -->
+
+	<div class="bg-dark border border-white pb-4 text-center heading container">
+
+		<h1 class="text-primary bg-transparent text-center pt-4 pb-2">ADMIN SETUP DIRECTORY</h1>
+		<hr class="bg-dark">
+		<div class="col-12">
+			<!-- add a button -->
+			<a th:href="@{/admin/question/showFormForAdd}"
+				class="col-4 btn btn-primary btn-sm mb-1 border border-dark"> Add Question </a> <a
+				th:href="@{/admin/question/list}"
+				class="text-dark col-4 font-weight-bolder btn btn-warning btn-sm mb-1 border border-dark">
+				View List Question </a>
+		</div>
+
+
+		<div class="col-12">
+
+			<a th:href="@{/admin/emails/showFormForAdd}"
+				class="col-4 btn btn-primary btn-sm mb-3 border border-dark"> Add Emails </a> <a
+				th:href="@{/admin/emails/list}"
+				class="text-dark col-4 font-weight-bolder btn btn-warning btn-sm mb-3 border border-dark">
+				View List Emails </a>
+		</div>
+
+
+		<div class="col-12">
+			<a th:href="@{/admin/exam/showFormForAdd}"
+				class="col-4 btn btn-primary btn-sm mb-1 border border-dark"> Add Exam </a> <a
+				th:href="@{/admin/exam/list}"
+				class="text-dark col-4 font-weight-bolder btn btn-warning btn-sm mb-1 border border-dark">
+				View List Exam </a>
+		</div>
+
+
+		<div class="col-12">
+			<a th:href="@{/admin/gexam/showFormForAdd}"
+				class="col-4 btn btn-primary btn-sm mb-3 border border-dark"> Add Gexam </a> <a
+				th:href="@{/admin/gexam/list}"
+				class="text-dark col-4 font-weight-bolder btn btn-warning btn-sm mb-3 border border-dark">
+				View List Gexam </a>
+		</div>
+
+		<div class="col-12">
+			<a th:href="@{/admin/student/showFormForAdd}"
+				class="col-4 btn btn-primary btn-sm mb-1 border border-dark"> Add Student </a> <a
+				th:href="@{/admin/student/list}"
+				class="text-dark col-4 font-weight-bolder btn btn-warning btn-sm mb-1 border border-dark">
+				View List Student </a>
+		</div>
+
+
+		<div class="col-12">
+			<a th:href="@{/admin/subject/showFormForAdd}"
+				class="col-4 btn btn-primary btn-sm mb-1 border border-dark"> Add Subject </a> <a
+				th:href="@{/admin/subject/list}"
+				class="text-dark col-4 font-weight-bolder btn btn-warning btn-sm mb-1 border border-dark">
+				View List Subject </a>
+				<a th:href="@{/app/showFormSub}"
+				class="col-4 btn btn-danger btn-sm mb-1 border border-dark"> Add Subject </a>
+				<a th:href="@{/admin/listusers}"
+				class="col-4 btn btn-danger btn-sm mb-1 border border-dark"> Users List </a>
+		</div>
+		
+
+		<div class="col-12">
+			<a th:href="@{/admin/notification/showFormForAdd}"
+				class="col-4 btn btn-primary btn-sm mb-1 border border-dark"> Add notification </a> <a
+				th:href="@{/admin/notification/list}"
+				class="text-dark col-4 font-weight-bolder btn btn-warning btn-sm mb-1 border border-dark">
+				View List notifications </a>
+		</div>
+
+
+</div>
+
+<div class="bg-dark text-center col-12 mt-4 pt-4 pb-4">
+		<div class="col-12">
+			<a th:href="@{/app/admin/addadmin}"
+				class="col-4 btn btn-primary btn-sm mb-1 border border-dark"> Add New Admin </a>
+		</div>
+
+
+		<div class="col-12">
+			<a th:href="@{/registration}"
+				class="col-4 btn btn-danger btn-sm mb-1 border border-dark"> Add Registration </a>
+		</div>
+
+
+		<div class="col-12">
+			<a th:href="@{/app/admin/upcsv}"
+				class="col-4 btn btn-danger btn-sm mb-3 border border-dark"> Upload Question
+				with CSV File </a>
+		</div>
+
+		<div class="col-12">
+			<a th:href="@{/}"
+				class="col-4 btn btn-success btn-sm mb-1 border border-dark"> Back to Home </a>
+		</div>
+</div>
+
+	
+
+</body>
+</html>
+
+

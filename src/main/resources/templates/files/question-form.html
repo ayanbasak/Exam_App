@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Question</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>Question Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Question</p>
+	
+		<form action="#" th:action="@{/admin/question/save}"
+						 th:object="${question}" method="POST">
+					
+			
+			<input type="text" th:field="*{qmodel}"
+					class="form-control mb-4 col-4" placeholder="qmodel">
+					
+			<input type="text" th:field="*{opi}"
+					class="form-control mb-4 col-4" placeholder="opi">
+			
+			<input type="text" th:field="*{opii}"
+					class="form-control mb-4 col-4" placeholder="opii">
+			
+			<input type="text" th:field="*{opiii}"
+					class="form-control mb-4 col-4" placeholder="opiii">
+					
+			<input type="text" th:field="*{opiv}"
+					class="form-control mb-4 col-4" placeholder="opiv">
+			
+			<input type="text" th:field="*{ans}"
+					class="form-control mb-4 col-4" placeholder="ans">
+					
+			<input type="text" th:field="*{rating}"
+					class="form-control mb-4 col-4" placeholder="rating">
+			
+			<input type="text" th:field="*{subject}"
+					class="form-control mb-4 col-4" placeholder="subject">
+			
+			<input type="text" th:field="*{qus}"
+					class="form-control mb-4 col-4" placeholder="question">
+			
+			<input type="text" th:field="*{qmark}"
+					class="form-control mb-4 col-4" placeholder="qmarks">
+					
+			
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/admin/question/list}">Back to Question List</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Emails</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>Emails Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Emails</p>
+	
+		<form action="#" th:action="@{/admin/emails/save}"
+						 th:object="${emails}" method="POST">
+					
+			<input type="text" th:field="*{id}"
+					class="form-control mb-4 col-4" placeholder="id">
+
+			<input type="text" th:field="*{email}"
+					class="form-control mb-4 col-4" placeholder="email">
+				
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/admin/emails/list}">Back to Email List</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

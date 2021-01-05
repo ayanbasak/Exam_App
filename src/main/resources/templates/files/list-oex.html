@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>oex Directory</title>
+</head>
+
+<body>
+
+
+<!-- <p th:text="'Time on the server is ' + ${theDate}" class="funny"/>  -->
+
+
+<div class="container">
+
+	<h3>oex Directory</h3>
+	<hr>
+	
+	<!-- add a button -->
+	<a th:href="@{/oex/showFormForAdd}"
+		class="btn btn-primary btn-sm mb-3">
+		Add oex
+	</a>
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>oid</th>
+				<th>subject</th>
+				<th>exname</th>
+				<th>stid</th>
+				<th>enid</th>
+				<th>Delete</th>
+				
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempOex : ${oex}">
+			
+				<td th:text="${tempOex.oid}" />	
+				<td th:text="${tempOex.subject}" />	
+				<td th:text="${tempOex.exname}" />	
+				<td th:text="${tempOex.stid}" />
+				<td th:text="${tempOex.enid}" />
+				
+				<td><a th:href="@{'/oex/delete/{id}'(id=${tempOex.oid})}" class="btn btn-danger btn-sm mb-3" method="GET">Delete</a></td>
+				           
+			</tr>
+		</tbody>		
+	</table>
+	
+</div>
+	
+</body>
+</html>
+
+
+	

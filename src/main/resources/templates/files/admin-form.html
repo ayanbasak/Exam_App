@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Admin</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>Exam Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Admin</p>
+	
+		<form action="#" th:action="@{/admin/save}"
+						 th:object="${admin}" method="POST">
+					
+			<input type="text" th:field="*{aname}"
+					class="form-control mb-4 col-4" placeholder="aname">
+
+			<input type="text" th:field="*{link}"
+					class="form-control mb-4 col-4" placeholder="link">
+					
+			<input type="text" th:field="*{subc}"
+					class="form-control mb-4 col-4" placeholder="subc">
+					
+			<input type="text" th:field="*{qmc}"
+					class="form-control mb-4 col-4" placeholder="qmc">
+					
+			
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/admin/list}">Back to Admin List</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

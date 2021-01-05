@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>Exam Directory</title>
+</head>
+
+<body>
+
+
+<!-- <p th:text="'Time on the server is ' + ${theDate}" class="funny"/>  -->
+
+
+<div class="container">
+
+	<h3>Student Directory</h3>
+	<hr>
+	
+	<!-- add a button -->
+	<a th:href="@{/admin/student/showFormForAdd}"
+		class="btn btn-primary btn-sm mb-3">
+		Add Student
+	</a>
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>sid</th>
+				<th>sname</th>
+				<th>subi</th>
+				<th>subii</th>
+				<th>subiii</th>
+				<th>subiv</th>
+				<th>subv</th>
+				<th>subvi</th>
+				<th>subvii</th>
+				<th>subviii</th>
+				<th>email</th>
+				<th>dob</th>
+				<th>class</th>
+				<th>mlang</th>
+				<th>cno</th>
+				<th>Delete</th>
+			
+				
+				
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempStudent : ${student}">
+			
+				<td th:text="${tempStudent.sid}" />	
+				<td th:text="${tempStudent.sname}" />	
+				<td th:text="${tempStudent.subi}" />	
+				<td th:text="${tempStudent.subii}" />	
+				<td th:text="${tempStudent.subiii}" />	
+				<td th:text="${tempStudent.subiv}" />	
+				<td th:text="${tempStudent.subv}" />	
+				<td th:text="${tempStudent.subvi}" />	
+				<td th:text="${tempStudent.subvii}" />	
+				<td th:text="${tempStudent.subviii}" />	
+				<td th:text="${tempStudent.email}" />	
+				<td th:text="${tempStudent.dob}" />	
+				<td th:text="${tempStudent.cls}" />	
+				<td th:text="${tempStudent.mlang}" />	
+				<td th:text="${tempStudent.cno}" />	
+				
+				
+				<td><a th:href="@{'/admin/student/delete/{id}'(id=${tempStudent.sid})}" class="btn btn-danger btn-sm mb-3" method="GET">Delete</a></td>
+				           
+			</tr>
+		</tbody>		
+	</table>
+	
+</div>
+	
+</body>
+</html>
+
+
+	
