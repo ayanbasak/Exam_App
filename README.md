@@ -18,5 +18,5 @@ http://localhost:8080/login
 5. basic html, css, bootstrap, jQuery, etc
 
 
-###### i build this application, just only for my basic practicing perpus, for that i am not included many features. it is not a complete application
+###### i build this application just only for my basic practicing perpus, for that i am not included many features. it is not a complete application
 
